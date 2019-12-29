@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "wwwroot/css/header.min.css",
+    "inputFile": "Styles/header.scss"
+  },
+  {
+    "outputFile": "wwwroot/css/footter.min.css",
+    "inputFile": "Styles/footter.scss"
+  }
+]
