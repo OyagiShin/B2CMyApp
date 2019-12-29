@@ -1,4 +1,8 @@
-﻿footer{
-    background-color:gray;
-    color:darkgray;
+﻿footer {
+    background-color: gray;
+    color: darkgray;
+
+    &:hover {
+        background-color: darkgray;
+    }
 }
