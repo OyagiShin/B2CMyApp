@@ -13,9 +13,7 @@
 </head>
 <body>
     @*Header*@
-    <header class="sticky-top">
-        @await Html.PartialAsync("_Header")
-    </header>
+    @await Html.PartialAsync("_Header")
 
 
     @*Body*@
@@ -24,11 +22,6 @@
             @RenderBody()
         </div>
     </main>
-
-    <footer class="fixed-bottom">
-        <div>footer</div>
-    </footer>
-
 
     <script src="~/js/site.min.js" asp-append-version="true"></script>
 

@@ -4,6 +4,26 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-<div>テストだよん</div>
+<h4>Home</h4>
 
+@if ( User.Identity.IsAuthenticated ) {
+    <div>
+        <a asp-controller="Account" asp-action="EditProfile">プロフィール編集 >> </a>
+    </div>
+
+    <div>
+        <a asp-controller="Account" asp-action="ResetPassword"> パスワードリセット >> </a>
+    </div>
+
+    <div>
+        <a asp-controller="About" asp-action="Index">クレーム情報の確認 >> </a>
+    </div>
+
+} else {
+    <div>
+        <a asp-controller="Account" asp-action="SignIn">ログインする >> </a>
+
+
+    </div>
+    <a asp-controller="About" asp-action="Index">クレーム情報の確認 >> </a>
+}

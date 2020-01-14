@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "About/Index";
+    Layout = "_Layout";
+}
+
+<h4>クレーム情報</h4>
+
+<a asp-controller="Home" asp-action="Index"><< Home</a>
+
+@if ( User.Identity.IsAuthenticated ) {
+    var claims = User.Claims;
+
+    // クレーム情報の表示
+<div>
+    <table class="table table-hover" style="table-layout:fixed;width:100%;">
+        <tr>
+            <td>Type</td>
+            <td>Value</td>
+            <td>Issuer</td>
+            <td>OriginalIssuer</td>
+        </tr>
+        @foreach ( var claim in claims ) {
+            <tr>
+                <td style="word-wrap:break-word;">@claim.Type</td>
+                <td style="word-wrap:break-word;">@claim.Value</td>
+                <td style="word-wrap:break-word;">@claim.Issuer</td>
+                <td style="word-wrap:break-word;">@claim.OriginalIssuer</td>
+            </tr>
+        }
+    </table>
+</div>
+    
+
+} else {
+    <div>クレーム情報はありません</div>
+}
+
+
